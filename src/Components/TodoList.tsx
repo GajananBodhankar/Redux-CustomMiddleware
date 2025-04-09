@@ -15,9 +15,9 @@ function TodoList() {
         Get Data
       </button>
       <ul>
-        {data?.map((i) => (
-          <li key={i.id}>
-            <p>{i.title}</p>
+        {data?.map((item) => (
+          <li key={item.id}>
+            <p>{item.title}</p>
           </li>
         ))}
       </ul>
