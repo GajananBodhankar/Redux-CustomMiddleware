@@ -1,9 +1,8 @@
-import React from "react";
 import { useAppSelector, useAppDispatch } from "../Redux/hooks";
 import { loading } from "../Redux/Slice";
 
 function TodoList() {
-  const { data, status } = useAppSelector((state) => state.SliceReducer);
+  const { data } = useAppSelector((state) => state.SliceReducer);
   const dispatch = useAppDispatch();
   return (
     <div className="container">
