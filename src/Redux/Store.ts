@@ -5,7 +5,9 @@ import { apiCall } from "../Components/Logic";
 const CustomMiddleware = (store: any) => {
   return function (next: any) {
     return function (action: any) {
-      return apiCall(store.dispatch, action, next);
+      const { SliceReducer } = store.getState();
+      if (!SliceReducer.data?.length) return apiCall(store.dispatch, action, next);
+      else next(action);
     };
   };
 };
@@ -18,4 +20,3 @@ const Store = configureStore({
   },
 });
 export default Store;
-

@@ -57,3 +57,6 @@ button:focus-visible {
 .items {
   display: flex;
 }
+ul{
+  list-style: decimal;
+}

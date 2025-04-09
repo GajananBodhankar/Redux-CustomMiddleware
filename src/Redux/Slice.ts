@@ -20,7 +20,6 @@ const Slice = createSlice({
     },
     loading: (state) => {
       state.status = "Loading";
-      state.data = [];
     },
   },
 });

@@ -13,13 +13,13 @@ function TodoList() {
       >
         Get Data
       </button>
-      {data?.map((i) => (
-        <div key={i.id} className="items">
-          <p>{i.id}</p>
-          <p>{i.title}</p>
-          <p>{i.completed}</p>
-        </div>
-      ))}
+      <ul>
+        {data?.map((i) => (
+          <li key={i.id}>
+            <p>{i.title}</p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
