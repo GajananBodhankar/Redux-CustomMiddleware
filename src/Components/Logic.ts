@@ -27,7 +27,6 @@ export async function apiCall(dispatch: (arg0: iDispatch) => void, action: iActi
   try {
     const result = await axios.get("https://jsonplaceholder.typicode.com/todos");
     if (result.status === 200) {
-      console.log(result.data, action);
       if (action?.type === Actions.LOADING) {
         dispatch(success(result.data));
       }

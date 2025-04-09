@@ -6,6 +6,7 @@ function TodoList() {
   const dispatch = useAppDispatch();
   return (
     <div className="container">
+      <h2>Custom Redux Middleware</h2>
       <button
         onClick={() => {
           dispatch(loading());
